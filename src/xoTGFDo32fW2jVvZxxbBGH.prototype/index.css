@@ -1,0 +1,46 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORT — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORT MUST NEVER BE DELETED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss';
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@theme {
+  /* Taken from the logo: its cream ground and its near-black mark */
+  --color-paper: #fcf6df;
+  --color-paper-deep: #f4ebc8;
+  --color-paper-edge: #e6d9a8;
+  --color-ink: #121116;
+  --color-ink-soft: #4b463a;
+  --color-ink-mute: #6f6855;
+  --color-accent: #a3261f;
+  --color-accent-deep: #8c1f19;
+  --color-accent-bright: #e0453b;
+
+  --font-sans: 'Hind Siliguri', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Noto Serif Bengali', 'Hind Siliguri', serif;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* film-strip perforation used as a quiet brand rule */
+.film-rule {
+  height: 14px;
+  background-color: var(--color-ink);
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 6px,
+    var(--color-paper) 6px 14px,
+    transparent 14px 20px
+  );
+  background-size: 20px 6px;
+  background-repeat: repeat-x;
+  background-position: 0 4px;
+}
